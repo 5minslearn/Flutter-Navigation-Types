@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './tab.dart';
+import './about.dart';
+import './secret.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      routes: <String, WidgetBuilder>{
+        "/about": (BuildContext context) => const About(),
+        "/home": (BuildContext context) => const HomePage(),
+        "/secret": (BuildContext context) => const SecretPage(),
+      },
+      initialRoute: "/home",
+      title: 'Flutter Navigation',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
