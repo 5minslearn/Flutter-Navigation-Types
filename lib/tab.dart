@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './tabs/tab1.dart';
 import './tabs/tab2.dart';
 import './tabs/tab3.dart';
+import './drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,6 +12,7 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+          drawer: const MyDrawer(),
           appBar: AppBar(
             title: const Text("Home"),
             bottom: const TabBar(
